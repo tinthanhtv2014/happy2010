@@ -25,6 +25,7 @@ body{
 }
 ::selection{background:var(--rose); color:var(--night)}
 button{font:inherit}
+[hidden]{display:none !important}
 :focus-visible{outline:2px dashed var(--gold); outline-offset:4px}
 
 /* ---------- ambient layers ---------- */
@@ -61,6 +62,7 @@ main.shake{animation:shake .55s cubic-bezier(.36,.07,.19,.97)}
   transition:transform 1.25s cubic-bezier(.75,0,.2,1)}
 .c-left{left:0; border-right:2px solid var(--gold); box-shadow:inset -30px 0 60px rgba(0,0,0,.4)}
 .c-right{right:0; border-left:2px solid var(--gold); box-shadow:inset 30px 0 60px rgba(0,0,0,.4)}
+.curtain.open{pointer-events:none}
 .curtain.open .c-left{transform:translateX(-102%)}
 .curtain.open .c-right{transform:translateX(102%)}
 .seal{position:relative; z-index:1; display:grid; justify-items:center; gap:10px; transition:transform .7s cubic-bezier(.5,0,.7,.3), opacity .6s}
